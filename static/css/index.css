@@ -1,0 +1,30 @@
+.header {
+	width: 100%;
+}
+button {
+	margin: 0px 15px 15px 0px;
+	font-weight: bold;
+}
+.container {
+	width: 450px;
+	height: 450px;
+}
+.container .row {
+	width: 100%;
+	height: 33%;
+}
+.container .row .cell {
+	width: 32%;
+	height: 100%;
+	border: 1px solid #000;
+	float: left;
+	text-align: center;
+	vertical-align: middle;
+	font: 7em arial, serif;
+}
+.computer {
+	color: red;
+}
+.human {
+	color: blue;
+}
