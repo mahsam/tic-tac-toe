@@ -28,15 +28,15 @@ class index:
 
 class api:
 	"""handle api calls for tic-tac-toe game"""
-	def GET(self, verb):
+	def GET(self, action):
 		# start the game
-		if verb == "start":
+		if action == "start":
 			session.game = tic_tac_toe.Game()
 			result = session.game.start()
 			web.header('Content-Type', 'application/json')
 			return json.dumps(result)
 
-		if verb == "state":
+		if action == "state":
 			# if the game exists, it returns the latests state of the board
 			if hasattr(session, 'game'):
 				result = session.game.state(False)
@@ -46,8 +46,8 @@ class api:
 			web.header('Content-Type', 'application/json')
 			return json.dumps(result)
 
-	def POST(self, verb):
-		if verb == "update":
+	def POST(self, action):
+		if action == "update":
 			user_data = web.input(cell=[])
 			result = session.get('game').update(int(user_data["cell"][0]))
 			web.header('Content-Type', 'application/json')
