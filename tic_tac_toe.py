@@ -4,7 +4,7 @@ from sets import Set
 
 class Game():
 	""" a Game between a computer and a human
-		This prorgram should win the human player, the winning is not 100 percent guaranteed.
+		This program should beat the human player, although winning is not guaranteed.
 	"""
 	# all the rows which make a you winner
 	tic_tac_toe = [(1, 2, 3), (1, 4, 7), (1, 5, 9), (2, 5, 8), (3, 6, 9), (3, 5, 7), (4, 5, 6), (7, 8, 9)]
